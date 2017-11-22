@@ -354,7 +354,7 @@ let ocb ?(flags=[]) ?(quiet=false) cmd =
     how OCaml gets module names from file names. *)
 let mcase s =
   sprintf "%c%s"
-    (Char.uppercase s.[0])
+    (Char.uppercase_ascii s.[0])
     (String.sub s 1 (String.length s - 1))
 
 (** [check_prefix a b] returns [true] if [a] is a prefix of [b]. *)
